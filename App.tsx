@@ -70,6 +70,23 @@ function ScreenC() {
   );
 }
 
+/**
+ * Steps to reproduce the issue.
+ *
+ * 1. Open the app.
+ * 2. Go to screen B without preloading screen C.
+ * 3. Swipe back to screen A.
+ * 4. Preload screen C (the screen with `gestureEnabled` set to false).
+ * 5. Go to screen B again.
+ * 6. Swipe back to screen A.
+ * 
+ * Current behavior:
+ * It is not possible to swipe back to screen A from screen B when screen C is preloaded.
+ * 
+ * Expected behavior:
+ * It is possible to swipe back to screen A from screen B when screen C is preloaded.
+ */
+
 export default function App() {
   return (
     <NavigationContainer>
